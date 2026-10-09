@@ -41,3 +41,37 @@ export interface StudentStats {
   subjectDistribution: { subject: string; count: number }[];
   recentTrend: { date: string; correct: number; total: number }[];
 }
+
+// 教学模块相关类型
+export interface TeachingQuestion {
+  id: string;
+  content: string;
+  subject: string;
+  grade: string;
+  imageUrl?: string;
+}
+
+export interface TeachingStep {
+  stepNumber: number;
+  title: string;
+  content: string;
+  hint: string;
+  interactive?: {
+    type: 'question' | 'choice' | 'similar';
+    question: string;
+    answer?: string;
+    options?: string[];
+    correctAnswer?: string;
+    similarProblem?: string;
+  };
+}
+
+export interface TeachingSession {
+  id: string;
+  question: string;
+  subject: string;
+  grade: string;
+  createdAt: string;
+  isCompleted: boolean;
+  stepsCount: number;
+}

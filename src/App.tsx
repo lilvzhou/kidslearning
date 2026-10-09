@@ -9,6 +9,7 @@ import {
   BellOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  ReadOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
@@ -16,6 +17,7 @@ import Dashboard from './components/Dashboard';
 import WrongQuestionRecord from './components/WrongQuestionRecord';
 import AIAnalysis from './components/AIAnalysis';
 import PracticeGenerator from './components/PracticeGenerator';
+import TeachingModule from './components/TeachingModule';
 import { AnalysisResult, WrongQuestion } from './types';
 
 const { Header, Sider, Content } = Layout;
@@ -54,6 +56,11 @@ const App: React.FC = () => {
       key: 'practice',
       icon: <EditOutlined />,
       label: '针对性练习',
+    },
+    {
+      key: 'teaching',
+      icon: <ReadOutlined />,
+      label: 'AI教学讲解',
     },
   ];
 
@@ -96,6 +103,8 @@ const App: React.FC = () => {
             onBack={handleBackFromPractice}
           />
         );
+      case 'teaching':
+        return <TeachingModule />;
       default:
         return <Dashboard />;
     }
@@ -186,6 +195,7 @@ const App: React.FC = () => {
                   {currentMenu === 'wrong-questions' && '📝 错题记录 - 记录和管理错题'}
                   {currentMenu === 'ai-analysis' && '🤖 AI智能分析 - 分析错题原因'}
                   {currentMenu === 'practice' && '🎯 针对性练习 - 巩固薄弱环节'}
+                  {currentMenu === 'teaching' && '📚 AI教学讲解 - 不会的题慢慢学'}
                 </Text>
               </div>
             </div>
