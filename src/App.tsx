@@ -166,7 +166,7 @@ const App: React.FC = () => {
 
           {/* 底部信息 */}
           {!collapsed && (
-            <div className="absolute bottom-4 left-4 right-4">
+            <div className="px-4 pb-4 mt-4">
               <div className="p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
                 <Text className="text-xs text-gray-500 block text-center">
                   🌟 每天进步一点点
