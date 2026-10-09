@@ -129,9 +129,8 @@ const App: React.FC = () => {
           collapsible
           collapsed={collapsed}
           width={240}
-          className="shadow-lg"
+          className="shadow-lg overflow-y-auto"
           style={{
-            overflow: 'auto',
             height: '100vh',
             position: 'fixed',
             left: 0,
@@ -161,13 +160,13 @@ const App: React.FC = () => {
             items={menuItems}
             onClick={handleMenuClick}
             className="border-r-0 mt-2"
-            style={{ fontSize: 15 }}
+            style={{ fontSize: 14 }}
           />
 
           {/* 底部信息 */}
           {!collapsed && (
-            <div className="px-4 pb-4 mt-4">
-              <div className="p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
+            <div className="px-4 pb-4 mt-2">
+              <div className="p-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
                 <Text className="text-xs text-gray-500 block text-center">
                   🌟 每天进步一点点
                 </Text>
