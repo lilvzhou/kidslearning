@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* 自定义全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ant Design 覆盖样式 */
+.ant-layout-sider {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.ant-menu-item-selected {
+  background-color: #e6f7ff !important;
+  border-right: 3px solid #1890ff !important;
+}
+
+.ant-card {
+  border-radius: 12px !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.ant-btn-primary {
+  box-shadow: 0 2px 4px rgba(24, 144, 255, 0.3) !important;
+}
+
+.ant-tag {
+  border-radius: 4px !important;
+}
+
+.ant-steps-item-title {
+  font-size: 13px !important;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 动画效果 */
+.ant-card {
+  transition: all 0.3s ease !important;
+}
+
+.ant-card-hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: relative !important;
+    height: auto !important;
+  }
+}
